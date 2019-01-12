@@ -24,4 +24,5 @@ Bot will comment on the same post multiple times.  I decided to just label this 
 (1)  I haven't figured out how to fix it, and I want to be done with this project.
 (2)  If you type a wall of text, then ignore a bot telling you that you typed a wall of text, you deserve another bot comment.
 
-
+V0.2
+Commented out or deleted unnecessary print lines and added notification window when bot replies.
