@@ -12,10 +12,12 @@ import praw
 # import re was in  guide script also not used 
 import os
 import datetime
+import ctypes
 
 import nltk
 #nltk.download("punkt")
 
+MessageBox = ctypes.windll.user32.MessageBoxW
 r = praw.Reddit('bot1')
 now = str(datetime.datetime.now())
 thepath = r'C:\Users\Darren\Documents\LiClipse Workspace\Wall_of_Text_Bot'
@@ -33,12 +35,12 @@ else:
 		posts_replied_to = f.read()
 		posts_replied_to = posts_replied_to.split('\n')
 		posts_replied_to = list(filter(None, posts_replied_to))
-	print("Opened the reply file.")
+	#print("Opened the reply file.")
 	#working
 
 if not os.path.isfile('bot_runtimes.txt'):
 	bot_runtimes = []
-	print("Did't have bot runtimes file")
+	#print("Did't have bot runtimes file")
 	#working
 	
 else:
@@ -47,17 +49,17 @@ else:
 		bot_runtimes = f.read()
 		bot_runtimes = bot_runtimes.split('\n')
 		bot_runtimes= list(filter(None, bot_runtimes))
-		print("Opened the runtime file.")
+		#print("Opened the runtime file.")
 		
 	with open('bot_runtimes.txt', 'a') as f:   
-		print(now)
+		#print(now)
 		f.write(now + '\n')
-		print("Wrote new run time to the file")
+		#print("Wrote new run time to the file")
 
 subreddit = r.subreddit('All')
-for submission in subreddit.hot(limit=5):
+for submission in subreddit.hot(limit=250):
 	if submission.id not in posts_replied_to:
-		print ("Sub ID not in replied file.")
+		# print ("Sub ID not in replied file.")
 			
 		data = submission.selftext
 		words = data.split(" ")
@@ -75,8 +77,9 @@ http://apps.prsa.org/intelligence/tactics/articles/view/10215/1078/cut_it_down_r
 
 Beep boop.  I'm a bot.  If you think this was in error, you can message me.  I'll probably ignore it.  Beep boop.
 				""")
-			print('Bot replying type 1 to: ', submission.title)
+			#print('Bot replying type 1 to: ', submission.title)
 			posts_replied_to.append(submission.id)
+			MessageBox(None, 'New Type 1 Reply', 'Message', 0)
 			with open('posts_replied_to.txt', 'w') as f:
 				for post_id in posts_replied_to:
 					f.write(post_id + '\n')
@@ -98,8 +101,9 @@ http://apps.prsa.org/intelligence/tactics/articles/view/10215/1078/cut_it_down_r
 Beep boop.  I'm a bot.  If you think this was in error, you can message me.  I'll probably ignore it.  Beep boop.
 				""")
 					
-					print('Bot replying type 2 to: ', submission.title)
+					#print('Bot replying type 2 to: ', submission.title)
 					posts_replied_to.append(submission.id)
+					MessageBox(None, 'New Type 2 Reply', 'Message', 0)
 					with open('posts_replied_to.txt', 'w') as f:
 						for post_id in posts_replied_to:
 							f.write(post_id + '\n')
