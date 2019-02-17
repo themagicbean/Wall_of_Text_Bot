@@ -1,7 +1,7 @@
 '''
 Created on Nov 25, 2018
 
-@author: themagicbean (Miseong Kong)
+@author: themagicbean (Darren Bean)
 
 Wall of Text Bot 0.01
 
