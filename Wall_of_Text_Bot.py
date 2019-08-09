@@ -38,7 +38,7 @@ else:
 
 if not os.path.isfile('bot_runtimes.txt'):
 	bot_runtimes = []
-	print("Did't have bot runtimes file")
+	print("Didn't have bot runtimes file")
 	#working
 	
 else:
