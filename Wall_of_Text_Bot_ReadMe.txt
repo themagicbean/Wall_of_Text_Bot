@@ -1,6 +1,6 @@
 Wall of Text Bot Readme
 
-Miseong Kong (themagicbean) 2018 / GPL 3.0
+themagicbean 2018 / GPL 3.0
 
 Tired of reading posts that just go on and on, without any visual break?
 
