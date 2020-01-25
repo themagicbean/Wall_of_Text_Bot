@@ -1,4 +1,4 @@
-Wall of Text Bot Readme
+Wall of Text Bot Readme (see B under known issues)
 
 themagicbean 2018 / GPL 3.0
 
@@ -20,8 +20,10 @@ Running: Windows Task Scheduler:
 Set timing as you please and run python.exe with the argument being the bot file location.
 
 Known issue:
-Bot will comment on the same post multiple times.  I decided to just label this a feature instead of a bug.  Two reasons:
+A. Bot will comment on the same post multiple times.  I decided to just label this a feature instead of a bug.  Two reasons:
 (1)  I haven't figured out how to fix it, and I want to be done with this project.
 (2)  If you type a wall of text, then ignore a bot telling you that you typed a wall of text, you deserve another bot comment.
+
+B. Also, as this was my first semi-functioning project, I failed to note the version of Python and PRAW.  May not work anymore.
 
 
