@@ -3,6 +3,9 @@ Created on Nov 25, 2018
 
 @author: themagicbean (Darren Bean)
 
+NOTE this uses the latest versions of Python and PRAW as they were 11/25/18.  Significant changes to the language 
+and API may affect function.  It was one of my first functioning projects, please forgive.
+
 Wall of Text Bot 0.01
 
 '''
